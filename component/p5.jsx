@@ -4,6 +4,7 @@ import { useEffect, useRef } from "react";
 
 const P5Sketch = () => {
   const sketchRef = useRef(null);
+  const p5InstanceRef = useRef(null);
 
   useEffect(() => {
     let p5Instance;
@@ -32,6 +33,7 @@ const P5Sketch = () => {
       };
 
       p5Instance = new p5(sketch, sketchRef.current);
+      p5InstanceRef.current = p5Instance; // Save the p5 instance
     };
 
     loadP5();
@@ -41,7 +43,18 @@ const P5Sketch = () => {
     };
   }, []);
 
-  return <div ref={sketchRef}></div>;
+  const handleSave = () => {
+    if (p5InstanceRef.current) {
+      p5InstanceRef.current.saveCanvas('myCanvas', 'png'); // Save the canvas as an image
+    }
+  };
+
+  return (
+    <div>
+      <div ref={sketchRef}></div>
+      <button onClick={handleSave}>Save Drawing</button>
+    </div>
+  );
 };
 
 export default P5Sketch;
