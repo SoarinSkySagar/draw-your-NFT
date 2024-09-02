@@ -13,7 +13,7 @@ const P5Sketch = () => {
 
       const sketch = (p) => {
         p.setup = () => {
-          p.createCanvas(window.innerWidth, window.innerHeight / 2);
+          p.createCanvas(window.innerWidth, window.innerHeight);
           p.background(255);
         };
 
