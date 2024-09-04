@@ -2,7 +2,6 @@
 
 import { useEffect, useRef } from "react";
 import useStore from "@/store/zustand";
-import p5 from "p5";
 
 const P5Sketch = () => {
   const sketchRef = useRef(null);
@@ -15,8 +14,9 @@ const P5Sketch = () => {
   }));
 
   useEffect(() => {
-    console.log("pen changed!");
-    const loadP5 = () => {
+    const loadP5 = async () => {
+      const p5 = (await import("p5")).default;
+
       const sketch = (p) => {
         p.setup = () => {
           p.createCanvas(window.innerWidth, window.innerHeight);
