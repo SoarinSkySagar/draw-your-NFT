@@ -5,7 +5,7 @@ export default function P5Page() {
   return (
     <div>
       <PenBar />
-      {/* <P5Sketch /> */}
+      <P5Sketch />
     </div>
   );
 }
