@@ -1,11 +1,11 @@
-import EditBar from "@/component/EditBar";
-import P5Sketch from "@/component/p5";
+import P5Sketch from "@/components/p5";
+import PenBar from "@/components/PenBar";
 
 export default function P5Page() {
   return (
-    <div className="" >
+    <div>
+      <PenBar />
       {/* <P5Sketch /> */}
-      <EditBar />
     </div>
   );
 }
