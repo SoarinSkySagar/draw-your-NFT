@@ -1,6 +1,6 @@
 ## Setting up the development environment
 
-To get the server up and running, enter one of the followinf commands in the terminal:
+To get the server up and running, enter one of the following commands in the terminal:
 
 ```bash
 npm run dev
