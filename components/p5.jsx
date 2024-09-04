@@ -47,19 +47,18 @@ const P5Sketch = () => {
         };
       };
 
-      // Create a new p5 instance
       const p5Instance = new p5(sketch, sketchRef.current);
       p5InstanceRef.current = p5Instance;
 
       console.log(sketchRef.current);
 
-      // Cleanup on unmount
       return () => {
         p5Instance?.remove();
       };
     };
 
     loadP5();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const handleSave = () => {
