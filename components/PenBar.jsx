@@ -2,7 +2,7 @@
 
 import useStore from "@/store/zustand";
 
-const styles = ["Pen", "Brush", "Spray"];
+const styles = ["Pen", "Spray", "Brush"];
 const colors = ["red", "green", "blue"];
 
 export default function PenBar() {
